@@ -73,21 +73,21 @@ Object type is B
 
 ## Type Casting 
 ```java 
-public class Animal (){
+public class Animal {
     public void run (){
         System.out.println ("can have 2 or 4 legs")
     }
 }
 ```
 ```java
-public class FourLegsAnimal extends Animal (){
+public class FourLegsAnimal extends Animal {
     public void run (){
         System.out.println("actually has 4 legs");
     }
 }
 ```
 ```java 
-public class Dog () extends FourLegsAnimal{
+public class Dog extends FourLegsAnimal{
     public void run (){
         System.out.println("It's a dog");
     }
