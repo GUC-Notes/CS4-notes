@@ -1,7 +1,8 @@
 # CS4-notes
-Notes for cs4 game course 
+Notes for CS4 game course 
 
-Please consider contributing 
+> Please consider contributing
+
 ## Final modifier
 
 If you won't a method to be overridden.
