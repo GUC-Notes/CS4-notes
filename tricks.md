@@ -8,7 +8,7 @@ public class A {
     }
 }
 public class B extends A {
-    char c = 'B'
+    char x = 'B'
     public void run {
         System.out.println("Object type is B");
     }
@@ -26,9 +26,9 @@ System.out.println(a.x);
 System.out.println(b.x);
 System.out.println(trick.x);
 
-a.run;
-b.run;
-trick.run
+a.run();
+b.run();
+trick.run();
 ```
 results are 
 
