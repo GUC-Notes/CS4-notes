@@ -120,3 +120,39 @@ it will give a run time error cannot cast from FourLegsAnimal to Dog
 ## Multiple Inheritance
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
 
+## Final modifier
+
+## Exceptions
+
+The following code will not compile the NullPointerException catch block is unreachable because NullPointerException is a subClass of Exception
+
+```java
+public void method(){
+    try{
+        //Something
+    } catch (Exception e){
+        //Something
+    } catch (NullPointerException e) {
+        //Something
+    }
+}
+```
+While the following code will compile and run since because the compiler can't see that the second catch block is unreachable
+
+```java
+public void method(){
+    try{
+        //Something
+    } catch (Exception e){
+        //Something
+    }
+}
+public void methodCaller(){
+    try{
+        method()
+    } catch (NullPointerException e){
+        //Something
+    }
+}
+
+```
