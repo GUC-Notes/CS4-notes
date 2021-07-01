@@ -32,12 +32,18 @@ trick.run
 ```
 results are 
 A
+
 B
+
 A
 
-Object type is A
-Object type is B
-Object type is B
+
+
+Object type is A\
+
+Object type is B\
+
+Object type is B\
 
 `conclusion` late binding does not apply to instance variable but apply to instance methods 
 
