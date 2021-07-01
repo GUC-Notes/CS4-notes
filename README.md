@@ -55,9 +55,9 @@ System.out.println(trick.x);
 
 System.out.println("------");
 
-a.run;
-b.run;
-trick.run
+a.run();
+b.run();
+trick.run();
 ```
 Results are 
 ```
