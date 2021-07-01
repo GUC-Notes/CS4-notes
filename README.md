@@ -51,25 +51,21 @@ System.out.println(a.x);
 System.out.println(b.x);
 System.out.println(trick.x);
 
+System.out.println("------");
+
 a.run;
 b.run;
 trick.run
 ```
-results are 
-
+Results are 
+```
 A
-
 B
-
 A
-
-
-
+------
 Object type is A
-
 Object type is B
-
 Object type is B
-
+```
 `conclusion` late binding does not apply to instance variable but apply to instance methods 
 
