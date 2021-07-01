@@ -1,7 +1,7 @@
 # CS4-notes
 notes for cs4 game course 
 
-## final modifier
+## Final modifier
 
 If you won't a method to be overridden.
 ``` java
