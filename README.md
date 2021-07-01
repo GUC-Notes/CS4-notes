@@ -28,6 +28,8 @@ public class A {
         System.out.println("Object type is  A");
     }
 }
+```
+```java
 public class B extends A {
     char c = 'B'
     public void run {
@@ -36,13 +38,15 @@ public class B extends A {
 }
 ```
 
-what would be result of 
+what would be result of?
 
 ```java
 A a = new A ();
 B b = new B ();
 A trick = new B();
+```
 
+```java
 System.out.println(a.x);
 System.out.println(b.x);
 System.out.println(trick.x);
