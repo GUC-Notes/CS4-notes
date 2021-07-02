@@ -273,3 +273,7 @@ public void methodCaller(){
 
 The abstract methods in any abstract class must be defined once the subclass is not Abstract. Meaning that if an abstract class extends another abstract one you cannot have a body for the method in either class :) 
 
+## Interfaces 
+
+Any method written in an interface is set to be (public) by default.
+
