@@ -26,48 +26,53 @@ public final class Hello{
 ```java 
 public class A {
     char x = 'A';
-    public void run() {
+    public void run {
         System.out.println("Object type is  A");
     }
 }
+```
+```java
 public class B extends A {
-    char x = 'B';
-    public void run() {
+    char x = 'B'
+    public void run {
         System.out.println("Object type is B");
     }
 }
 ```
 
-### (1)  What would be result of
+what would be result of?
 
 ```java
 A a = new A ();
 B b = new B ();
 A trick = new B();
+```
 
+```java
 System.out.println(a.x);
 System.out.println(b.x);
 System.out.println(trick.x);
+
+System.out.println("------");
 
 a.run();
 b.run();
 trick.run();
 ```
+Results are 
 ```
 A
-
 B
-
 A
-
+------
 Object type is A
-
 Object type is B
-
 Object type is B
 ```
 `conclusion` late binding does not apply to instance variable but apply to instance methods 
 
+<<<<<<< HEAD
+=======
 `Please Note:` late binding can be applied to static variables.
 
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
@@ -128,7 +133,6 @@ cannot find symbol
 	symbol:   method run3()
 	location: variable trick of type Main.A
 ```
-
 
 ## Type Casting 
 ```java 
@@ -199,6 +203,42 @@ RunTime Error
 ## Multiple Inheritance
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
 
+## Cases of Type Casting
+
+```java
+		Person p = new Person();
+		Student s = new Student(); // Student extends Person
+		Teacher t = new Teacher(); // Teacher extends Person
+		
+		Person ps = new Student();
+		Person pt = new Teacher();
+		
+		Student sp = new Person(); // compilation error
+		Student st = new Teacher(); // compilation error
+	
+		Teacher tp = new Person(); // compilation error
+		Teacher ts = new Student(); // compilation error
+
+		System.out.println((Student) p); // run time error
+		System.out.println((Teacher) p); // run time error
+		
+		System.out.println((Person) s);
+		System.out.println((Teacher) s); // compilation error
+		
+		System.out.println((Person) t);
+		System.out.println((Student) t); // compilation error
+		
+		
+		System.out.println((Person) ps);
+		System.out.println((Student) ps);
+		System.out.println((Teacher) ps); // run time error
+		System.out.println((Person) pt);
+		System.out.println((Student) pt); // run time error
+		System.out.println((Teacher) pt);
+```
+
+
+
 ## Inheritance 
 
 What is the **OUTPUT** of the following **CODE**
@@ -228,10 +268,6 @@ public class Child extends Parent{
     }
 }
 ```
-
-```
-```
-
 **OUTPUT:** 1243
 
 In inheritance, you inherit all the public and private instance variables, but you can only access the public ones. 
