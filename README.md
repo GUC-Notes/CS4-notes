@@ -40,7 +40,7 @@ public class B extends A {
 }
 ```
 
-what would be result of?
+##### what would be result of?
 
 ```java
 A a = new A ();
@@ -76,7 +76,7 @@ Object type is B
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
 
 
-### (2) For the following code :
+#### For the following code :
 
 ```java
 
