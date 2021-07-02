@@ -71,8 +71,6 @@ Object type is B
 ```
 `conclusion` late binding does not apply to instance variable but apply to instance methods 
 
-<<<<<<< HEAD
-=======
 `Please Note:` late binding can be applied to static variables.
 
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
