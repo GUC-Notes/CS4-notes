@@ -270,6 +270,46 @@ public class Child extends Parent{
 
 In inheritance, you inherit all the public and private instance variables, but you can only access the public ones. 
 
+Look at the following Example and give the output before and after removing the comments:
+
+```java
+public class Student extends Person{
+
+    //static int counter=0;
+
+    public Student(String name, int age) {
+        super(name, age);
+        //counter++;
+
+    }
+    public void call(){
+        System.out.println("I'm a student");
+    }
+
+    public static void main(String[] args) {
+        Person p1 = new Person("Salah",19);
+        Student s1 = new Student("Sayed", 24);
+        System.out.println(Person.counter);
+        System.out.println(Student.counter);
+    }
+}
+```
+
+```
+Before: 
+Person.counter = 2 (because we created one person and one student so we have two persons)
+
+Student.counter = 2 (becuase we didn't override the static variable, so it will be inherited)
+
+```
+
+```
+After:
+Person.counter = 2
+
+Student.counter = 1
+```
+
 ## Exceptions
 
 The following code will not compile the NullPointerException catch block is unreachable because NullPointerException is a subClass of Exception
