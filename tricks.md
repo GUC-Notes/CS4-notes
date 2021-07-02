@@ -102,3 +102,56 @@ cannot find symbol
 	symbol:   method run3()
 	location: variable trick of type Main.A
 ```
+
+
+### (3) For the following code:
+
+```java
+
+public class A {
+	public void priv() {
+		System.out.println("A");
+	}
+	public void printPriv(A a) {
+		a.priv();
+	}
+}
+
+public class B extends A {
+	public void priv() {
+		System.out.println("B");
+	}
+	public void printPriv(B b) {
+		b.priv();
+	}
+
+	public static void main(String args[]) {
+		A a = new A();
+		B b = new B();
+
+		a.printPriv(b);
+	}
+}
+```
+	
+#### The result is:
+```
+B
+```
+#### but if we declare A with the priv method private instead of public:
+
+```java
+public class A {
+	private void priv() {
+		System.out.println("A");
+	}
+	public void printPriv(A a) {
+		a.priv();
+	}
+}
+```
+
+#### The result is now:
+```
+A
+```
