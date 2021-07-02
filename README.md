@@ -75,7 +75,7 @@ Object type is B
 ```java 
 public class Animal {
     public void run (){
-        System.out.println ("can have 2 or 4 legs")
+        System.out.println ("can have 2 or 4 legs");
     }
 }
 ```
@@ -120,7 +120,40 @@ it will give a run time error cannot cast from FourLegsAnimal to Dog
 ## Multiple Inheritance
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
 
-## Final modifier
+## Inheritance 
+
+What is the **OUTPUT** of the following **CODE**
+
+```java
+public class Parent{
+    public void c1(){
+	    System.out.print("1");
+    	c2();
+    }
+    public void c2(){
+    	System.out.print("2");
+    }
+}
+public class Child extends Parent{
+    public void c1(){
+	    super.c1();
+    	System.out.print("3");
+    }
+    public void c2(){
+    	super.c2();
+    	System.out.print("4");
+	}
+    public static void main(String [] args){
+		Parent p = new Child();
+        p.c1();
+    }
+}
+```
+
+```
+```
+
+**OUTPUT:** 1243
 
 ## Exceptions
 
