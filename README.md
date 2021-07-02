@@ -388,7 +388,7 @@ but you can have it inside the class you're working on. See below .
 This is okay.
 ```java
 
-public class Person {
+public class Person { // you can remove the public to use that class within the package only
 
     private class Salah{
         
@@ -409,6 +409,8 @@ private class Person {
 
 ```
 
+Note that you can use the default access modifier with the class in our case 1.
+
 ### Access Modifiers Summary: 
 1. public: Members available everywhere
 2. private: Members available only in the class
@@ -420,3 +422,5 @@ private class Person {
 ## Overriding vs Overloading
 Overriding is to override the logic of a function in the parent class. The overriding function must have the exact same signature (return type, parameters and name).
 However, overloading is the idea of adding methods with the same name but different signature. The old function can still be called normally.
+
+
