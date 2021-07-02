@@ -330,7 +330,7 @@ Person myPerson = new Student(); // This is okay.
 
 1. A private constructor = you cannot instantiate an object from that class. 
 2. You can't override public methods in the parent class with a private ones in the child class.
-Overriding has to be more restrictive ! 
+Overriding (children) has to be less restrictive ! 
 
 private -> default -> protected -> public.
 from high to low restriction. 
