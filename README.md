@@ -120,10 +120,10 @@ trick.run3();
 ```
 #### Results are :
 ```
-runA
-```
-```
 runB
+```
+```
+run2A
 ```
 ```
 // compile error
