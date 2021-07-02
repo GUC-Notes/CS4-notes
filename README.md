@@ -175,6 +175,26 @@ Animal a = new FourLegsAnimal();
 ```
 it will give a run time error cannot cast from FourLegsAnimal to Dog 
 `Note` you can not type cast to lower class (sub class) (`important` lower Class means lower class of object type). 
+let's Add 
+```java 
+public class TwoLegsAnimal extends Animal {
+    public void run (){
+        System.out.println("actually has 2 legs");
+    }
+}
+```
+The OutputOf 
+```java
+FourLegsAnimal a1 = new FourLegsAnimal();
+Animal a2 = new FourLegsAnimal();
+((TowLegsAnimal) a1).run();
+((TowLegsAnimal) a2).run();
+```
+```
+Compile error 
+RunTime Error
+```
+`impportant` you cannot type cast 2 classes in different branches , compile error depend on referenceType but runTimeErroe depends on ObjectType
 
 ## Multiple Inheritance
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
