@@ -291,3 +291,17 @@ Person myPerson = new Student(); // This is okay.
 ```
 
 3. An interface can't have instance variables (by logic because we can't make instances of it) but it may have static variables.  
+
+## Encapsulation :
+
+1. A private constructor = you cannot instantiate an object from that class. 
+
+
+### Access Modifiers Summary: 
+1. public: Members available everywhere
+2. private: Members available only in the class
+3. default: Members available in the same class,package only.
+4. protected: Members available in the same class,package and another package but a subclass of this class. 
+**Note**: default is more protected than the protected access modifier :O 
+
+
