@@ -339,7 +339,33 @@ private -> default -> protected -> public.
 
 from high to low restriction. 
 
-3. You can't have a private class
+3. You can't have a private class in a new .java file.<br>
+but you can have it inside the class you're working on. See below .
+
+This is okay.
+```java
+
+public class Person {
+
+    private class Salah{
+        
+    }
+
+}
+
+```
+But this is wrong XXX:
+```java
+
+private class Person {
+
+   //Constructors and methods 
+
+}
+
+
+```
+
 ### Access Modifiers Summary: 
 1. public: Members available everywhere
 2. private: Members available only in the class
