@@ -354,6 +354,7 @@ The abstract methods in any abstract class must be defined once the subclass is 
 1. Any method written in an interface is set to be (public) by default.
 2. You can never use the word **new** before an interface or an abstract class name, but you can the name of the interface itself to have objects of that type. See below
 3. Interfaces can inherit from another interface
+4. Abstract class can implement an interface without providing an implementation for methods
 ```java
 
 // Assume we have an interface/abstract class called Person, 
