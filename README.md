@@ -270,6 +270,8 @@ public class Child extends Parent{
 ```
 **OUTPUT:** 1243
 
+In inheritance, you inherit all the public and private instance variables, but you can only access the public ones. 
+
 ## Exceptions
 
 The following code will not compile the NullPointerException catch block is unreachable because NullPointerException is a subClass of Exception
@@ -315,7 +317,8 @@ The abstract methods in any abstract class must be defined once the subclass is 
 2. You can never use the word **new** before an interface or an abstract class name, but you can the name of the interface itself to have objects of that type. See below
 ```java
 
-// Assume we have an interface/abstract class called Person, and a class Student that extends person.
+// Assume we have an interface/abstract class called Person, 
+and a class Student that extends person.
 
 Person myPerson = new Person(); // This is wrong XXX.
 Person myPerson = new Student(); // This is okay.
@@ -323,3 +326,4 @@ Person myPerson = new Student(); // This is okay.
 
 ```
 
+3. An interface can't have instance variables (by logic because we can't make instances of it) but it may have static variables.  
