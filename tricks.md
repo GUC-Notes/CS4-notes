@@ -3,19 +3,19 @@
 ```java 
 public class A {
     char x = 'A';
-    public void run {
+    public void run() {
         System.out.println("Object type is  A");
     }
 }
 public class B extends A {
-    char x = 'B'
-    public void run {
+    char x = 'B';
+    public void run() {
         System.out.println("Object type is B");
     }
 }
 ```
 
-what would be result of 
+### (1)  What would be result of
 
 ```java
 A a = new A ();
@@ -30,22 +30,75 @@ a.run();
 b.run();
 trick.run();
 ```
-results are 
-
+```
 A
 
 B
 
 A
 
-
-
 Object type is A
 
 Object type is B
 
 Object type is B
-
+```
 `conclusion` late binding does not apply to instance variable but apply to instance methods 
 
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
+
+### (2) For the following code :
+
+```java
+
+public class A {  
+    char x = 'A';  
+    public void run() {  
+        System.out.println("runA");  
+    }  
+    public void run2() {  
+        System.out.println("run2A");  
+    }  
+} 
+
+public class B extends A {  
+    char x = 'B';  
+  
+    public void run() {  
+        System.out.println("runB");  
+    }  
+  
+    public void run3() {  
+        System.out.println("run3B");  
+    }  
+}
+
+public static void main(String[] args) {  
+    A trick = new B();
+	
+	// Code block inserted here 
+}
+```
+#### What would be the result of :
+```
+trick.run();
+```
+```
+trick.run2();
+```
+```
+trick.run3();
+```
+#### Results are :
+```
+runA
+```
+```
+runB
+```
+```
+// compile error
+cannot find symbol
+	symbol:   method run3()
+	location: variable trick of type Main.A
+```
