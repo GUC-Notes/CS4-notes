@@ -282,7 +282,7 @@ The abstract methods in any abstract class must be defined once the subclass is 
 // Assume we have an interface/abstract class called Person, and a class Student that extends person.
 
 Person myPerson = new Person(); // This is wrong XXX.
-Hello myPerson = new Student(); // This is okay.
+Person myPerson = new Student(); // This is okay.
 
 
 ```
