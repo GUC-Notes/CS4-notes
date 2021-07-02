@@ -71,6 +71,69 @@ Object type is B
 ```
 `conclusion` late binding does not apply to instance variable but apply to instance methods 
 
+<<<<<<< HEAD
+=======
+`Please Note:` late binding can be applied to static variables.
+
+You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
+
+
+### (2) For the following code :
+
+```java
+
+public class A {  
+    char x = 'A';  
+    public void run() {  
+        System.out.println("runA");  
+    }  
+    public void run2() {  
+        System.out.println("run2A");  
+    }  
+} 
+
+public class B extends A {  
+    char x = 'B';  
+  
+    public void run() {  
+        System.out.println("runB");  
+    }  
+  
+    public void run3() {  
+        System.out.println("run3B");  
+    }  
+}
+
+public static void main(String[] args) {  
+    A trick = new B();
+	
+	// Code block inserted here 
+}
+```
+#### What would be the result of :
+```
+trick.run();
+```
+```
+trick.run2();
+```
+```
+trick.run3();
+```
+#### Results are :
+```
+runA
+```
+```
+runB
+```
+```
+// compile error
+cannot find symbol
+	symbol:   method run3()
+	location: variable trick of type Main.A
+```
+
 ## Type Casting 
 ```java 
 public class Animal {
@@ -116,6 +179,26 @@ Animal a = new FourLegsAnimal();
 ```
 it will give a run time error cannot cast from FourLegsAnimal to Dog 
 `Note` you can not type cast to lower class (sub class) (`important` lower Class means lower class of object type). 
+let's Add 
+```java 
+public class TwoLegsAnimal extends Animal {
+    public void run (){
+        System.out.println("actually has 2 legs");
+    }
+}
+```
+The OutputOf 
+```java
+FourLegsAnimal a1 = new FourLegsAnimal();
+Animal a2 = new FourLegsAnimal();
+((TowLegsAnimal) a1).run();
+((TowLegsAnimal) a2).run();
+```
+```
+Compile error 
+RunTime Error
+```
+`impportant` you cannot type cast 2 classes in different branches , compile error depend on referenceType but runTimeErroe depends on ObjectType
 
 ## Multiple Inheritance
 You can extend (only one class) and then implement (any number of interfaces). Respectively. *Java doesn't have multiple inheritance*
@@ -221,3 +304,22 @@ public void methodCaller(){
 }
 
 ```
+
+## Abstraction 
+
+The abstract methods in any abstract class must be defined once the subclass is not Abstract. Meaning that if an abstract class extends another abstract one you cannot have a body for the method in either class :) 
+
+## Interfaces 
+
+1. Any method written in an interface is set to be (public) by default.
+2. You can never use the word **new** before an interface or an abstract class name, but you can the name of the interface itself to have objects of that type. See below
+```java
+
+// Assume we have an interface/abstract class called Person, and a class Student that extends person.
+
+Person myPerson = new Person(); // This is wrong XXX.
+Person myPerson = new Student(); // This is okay.
+
+
+```
+
