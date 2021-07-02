@@ -234,6 +234,8 @@ public class Child extends Parent{
 
 **OUTPUT:** 1243
 
+In inheritance, you inherit all the public and private instance variables, but you can only access the public ones. 
+
 ## Exceptions
 
 The following code will not compile the NullPointerException catch block is unreachable because NullPointerException is a subClass of Exception
