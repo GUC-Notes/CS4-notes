@@ -5,7 +5,7 @@ Notes for CS4 game course
 
 ## Final modifier
 
-If you want a method to be overridden.
+If you don't want a method to be overridden.
 ``` java
 public final void doSomething(){
 
