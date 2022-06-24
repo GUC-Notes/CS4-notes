@@ -270,44 +270,62 @@ public class Child extends Parent{
 
 In inheritance, you inherit all the public and private instance variables, but you can only access the public ones. 
 
-Look at the following Example and give the output before and after removing the comments:
+Look at the following Example and give the output of the 4 print statements:
 
 ```java
-public class Student extends Person{
-
-    //static int counter=0;
-
-    public Student(String name, int age) {
-        super(name, age);
-        //counter++;
-
+public class Person {
+    static int counter = 0; // what if this was private?
+    String name;
+    int age;
+    
+    public Person(String name, int age) {
+        this.name = name;
+	this.age = age;
+	counter++;
     }
-    public void call(){
-        System.out.println("I'm a student");
-    }
-
-    public static void main(String[] args) {
+    
+    public static void main(String [] args) {
         Person p1 = new Person("Salah",19);
-        Student s1 = new Student("Sayed", 24);
+        Student1 s1 = new Student1("Sayed", 24);
+        Student2 s2 = new Student2("Samir", 28);
+        Student3 s3 = new Student3("Sameh", 31);
         System.out.println(Person.counter);
-        System.out.println(Student.counter);
+        System.out.println(Student1.counter);
+        System.out.println(Student2.counter);
+        System.out.println(Student3.counter);
+    }
+}
+
+public class Student1 extends Person {
+    public Student1(String name, int age) {
+        super(name, age);
+    }
+}
+
+public class Student2 extends Person {
+    static int counter = 0;
+    public Student2(String name, int age) {
+        super(name, age);
+    }
+}
+
+public class Student3 extends Person {
+    static int counter=0;
+
+    public Student3(String name, int age) {
+        super(name, age);
+        counter++;
     }
 }
 ```
 
 ```
-Before: 
-Person.counter = 2 (because we created one person and one student so we have two persons)
+Result: 
+4 // Each created object (Person or any student) incremented the static counter variable in Person
+4 // Student1 inherits the same static counter variable in Person
+0 // Student2 overrides the static counter variable in Person and starts from 0, the increment in the super class is reflected only in the super class' static variable
+1 // Student3 overrides the static counter variable in Person but increments its new overriden static counter
 
-Student.counter = 2 (becuase we didn't override the static variable, so it will be inherited)
-
-```
-
-```
-After:
-Person.counter = 2
-
-Student.counter = 1
 ```
 
 ## Exceptions
