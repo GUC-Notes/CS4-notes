@@ -364,6 +364,8 @@ public void methodCaller(){
 ```
 
 Class Cast Exceptions are thrown when you try to cast a parent into it's child. (thrown in run time)
+
+
 **Note:** Unchecked exceptions such as ArithmeticException , nullpointerException and RuntimeException needn't be declared in method signature. 
 
 ## Abstraction 
