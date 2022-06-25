@@ -362,7 +362,7 @@ public void methodCaller(){
 }
 
 ```
-
+Exceptions can only be thrown from methods or constructors.
 Class Cast Exceptions are thrown when you try to cast a parent into it's child. (thrown in run time)
 
 
