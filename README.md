@@ -462,10 +462,12 @@ public static class B extends A {
         A b = new B();
         b.method();
     }
-}```
+}
+```
 ```
 **Output:** BHello
 ```
+
 ```java 
 class A {
     private void method()
