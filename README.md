@@ -545,7 +545,7 @@ import java.util.Scanner;
  
  ```
    **OUTPUT:** "Make sure the specified file exists
-   ```
+  
    
 
     
@@ -590,5 +590,5 @@ import java.util.Scanner;
   ```
   **Compile error**
 
-```
+
 
