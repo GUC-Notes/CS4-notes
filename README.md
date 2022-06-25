@@ -441,4 +441,57 @@ Note that you can use the default access modifier with the class in our case 1.
 Overriding is to override the logic of a function in the parent class. The overriding function must have the exact same signature (return type, parameters and name).
 However, overloading is the idea of adding methods with the same name but different signature. The old function can still be called normally.
 
+```java
+class A {
+    protected void method()
+    {
+        System.out.println("AHello");
+    }
+
+
+public static class B extends A {
+
+     public void method()
+    {
+        System.out.println("BHello");
+    }
+
+
+    public static void main(String args[])
+    {
+        A b = new B();
+        b.method();
+    }
+}```
+
+**Output:** BHello
+
+```java 
+class A {
+    private void method()
+    {
+        System.out.println("AHello");
+    }
+
+
+public static class B extends A {
+
+     public void method()
+    {
+        System.out.println("BHello");
+    }
+
+
+    public static void main(String args[])
+    {
+        A b = new B();
+        b.method();
+    }
+}```
+
+**Output:** AHello
+**Note**: At runtime it prints the output of the method from the **subclass** if the access modifier of the super class was **public,protected or default** , **if** it was **private** it prints the output of the method from the **super class**
+
+
+
 
