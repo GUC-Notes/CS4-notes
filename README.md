@@ -544,7 +544,7 @@ import java.util.Scanner;
     
  
  ```
-   **OUTPUT:** "Make sure the specified file exists
+   **OUTPUT:** Make sure the specified file exists
   
    
 
