@@ -501,6 +501,48 @@ public static class B extends A {
 
 **Note**: At runtime it prints the output of the method from the **subclass** if the access modifier of the super class was **public,protected or default** , **if** it was **private** it prints the output of the method from the **super class**
 
+##Throwing Exceptions in overriding methods
+
+An overriding method can throw any unchecked exceptions, regardless of whether the overridden method throws exceptions or not. However, the overriding method should not throw checked exceptions that are new or broader than the ones declared by the overridden method. The overriding method can throw narrower (Subclass of the thrown exceptions) or fewer exceptions than the overridden method.
+
+
+```java
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Scanner;
+    abstract class Super {
+        public String readFile(String path) throws IOException {
+            throw new IOException();
+        }
+
+    static class ExceptionsExample extends Super {
+        @Override
+        public String readFile(String path) throws FileNotFoundException {
+            Scanner sc = new Scanner(new File("E://test//sample.txt"));
+            String input;
+            StringBuffer sb = new StringBuffer();
+            while (sc.hasNextLine()) {
+                input = sc.nextLine();
+                sb.append(" "+input);
+            }
+            return sb.toString();
+        }
+
+    }
+        public static void main(String args[]) {
+            String path = "E://test//sample.txt";
+            ExceptionsExample obj = new ExceptionsExample();
+            try {
+                System.out.println(obj.readFile(path));
+            }catch(FileNotFoundException e) {
+                System.out.println("Make sure the specified file exists");
+            }
+        }
+
+    } 
+    ```
+    **OUTPUT: "Make sure the specified file exists" **
 
 
 
