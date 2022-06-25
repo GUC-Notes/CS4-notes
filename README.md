@@ -440,12 +440,14 @@ Note that you can use the default access modifier with the class in our case 1.
 2. private: Members available only in the class
 3. default: Members available in the same class,package only.
 4. protected: Members available in the same class,package and another package but a subclass of this class. 
-**Note**: default is more protected than the protected access modifier :O 
+**Note** : default is more protected than the protected access modifier :O 
 
 
 ## Overriding vs Overloading
 Overriding is to override the logic of a function in the parent class. The overriding function must have the exact same signature (return type, parameters and name).
 However, overloading is the idea of adding methods with the same name but different signature. The old function can still be called normally.
+
+**Note:** you cannot write the same method signature (same name, and same parameters in same locations) twice with a different return type.
 
 ```java
 class A {
