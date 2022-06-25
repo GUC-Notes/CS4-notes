@@ -362,7 +362,10 @@ public void methodCaller(){
 }
 
 ```
+
 Class Cast Exceptions are thrown when you try to cast a parent into it's child. (thrown in run time)
+**Note:** Unchecked exceptions such as ArithmeticException , nullpointerException and RuntimeException needn't be declared in method signature. 
+
 ## Abstraction 
 
 The abstract methods in any abstract class must be defined once the subclass is not Abstract. Meaning that if an abstract class extends another abstract one you cannot have a body for the method in either class :) 
