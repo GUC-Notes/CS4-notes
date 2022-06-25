@@ -464,9 +464,8 @@ public static class B extends A {
     }
 }
 ```
-```
 **Output:** BHello
-```
+
 
 ```java 
 class A {
@@ -492,10 +491,10 @@ public static class B extends A {
 }
 
 ```
-```
 **Output:** AHello
+
 **Note**: At runtime it prints the output of the method from the **subclass** if the access modifier of the super class was **public,protected or default** , **if** it was **private** it prints the output of the method from the **super class**
-```
+
 
 
 
