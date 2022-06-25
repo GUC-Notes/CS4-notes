@@ -540,14 +540,15 @@ import java.util.Scanner;
             }
         }
 
-    } 
-    ```
+  }```
     
+   ``` 
+   ** OUTPUT: ** "Make sure the specified file exists 
+   
+   ```
     
-   ** OUTPUT: ** "Make sure the specified file exists"
-   
-   
-   ```java
+
+```java
    
    import java.io.File;
 import java.io.FileNotFoundException;
@@ -584,7 +585,8 @@ import java.util.Scanner;
 
     } ```
   
+  ```
   **Compile error**
 
-
+```
 
